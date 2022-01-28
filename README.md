@@ -1,2 +1,8 @@
 # hp5036a-music-generator
 Generating actual code to play music on the hp5036a microprocessor lab running an intel 8085.
+
+The hp5036a microprocessor lab is a wonderful old system that was a teaching tool for learning computers, released back in 1978. You can learn more about it in the HP computer museum, http://www.hpmuseum.net/display_item.php?hw=812 I happen to have a working one, and I think it's a pretty fun thing to play around with. It's weaker than the weakest microcontroller that I own, draws probably millions of times more power, but it can be programmed on the fly with it's nice, ultra-clicky hexadecimal keyboard. They seem to be reasonably rare nowadays so I doubt many people will be able to actually use this program.
+
+The challenge with this is that there's only 767 bytes of program space available in the microprocessor lab, out of the theoretical 64k that could be addressable. With expansion it'd likely be possible to use nearly the whole ~61k address space that's left over after the builtins, but that's a project for another time. You could also use a co-processor to generate code on the fly, generating the combo of loading the registers, calling beep2, and jump back to the start with different register numbers in the co-processor this time. 
+
+Why the hell am I doing this? Well I think it's a really cool piece of computing history, came out before even the intel 8086, which is the foundation of the x86 architecture we use nowadays. And I think it'd be funny to hear modern stuff played via the bleeps and bloops that could be generated way back in the day, on period-accurate hardware. 
